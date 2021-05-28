@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&display=swap');
+
+/*
+ * General
+*/
+* {
+    box-sizing: border-box;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #2d3436;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.red {
+    color: #f05051
+}
+
+.page {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s;
+    max-height: initial;
+}
+
+.page.hide {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+}
+
+/*
+ * Main
+*/
+.main .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 960px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col {
+    padding: 3rem;
+}
+
+.logo {
+    width: 25%;
+    text-align: center;
+}
+
+.logo img {
+    width: 8rem;
+}
+
+.logo h1 {
+    font-size: 1.25rem;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.75rem;
+}
+
+.content .bio {
+    margin-bottom: 1.25rem;
+}
+
+.content .links .view {
+    background: #f05051;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
+
+.content .links a:not(:last-of-type) {
+    margin-right: 1rem
+}
+
+.content .links img {
+    height: 1.19rem;
+    vertical-align: bottom;
+}
+
+@media (max-width: 768px) {
+    .main .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .content .links {
+        margin-top: 2rem;
+    }
+    .content .links a {
+        display: block;
+        margin: 1rem 0;
+    }
+    .content .links a:not(:last-of-type) {
+        margin-right: 0;
+    }
+}
+
+/*
+ * Projects
+*/
+.projects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #2d3436;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.close {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+.close:before, .close:after {
+    content: '';
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -5px;
+    margin-left: -25px;
+    display: block;
+    height: .8rem;
+    width: 4rem;
+    background-color: #fff;
+    transition: all 0.25s ease-out;
+}
+
+.close:after {
+    transform: rotate(-135deg);
+}
+
+.close:hover:before, .close:hover:after {
+    transform: rotate(0deg);
+}
+
+.projects .container {
+    display: flex;
+    justify-content: center;
+    max-width: 960px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem;
+    flex-direction: column;
+}
+
+.project {
+    margin-bottom: 3rem;
+}
+
+.project h2 {
+    margin-bottom: 1rem;
+}
+
+.badges span {
+    background: #f05051;
+    border-radius: .25rem;
+    padding: .25rem .5rem;
+    margin: 0 .25rem;
+    font-size: .75rem;
+}
+
+@media (max-width: 576px) {
+    .close {
+        top: 1rem;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .close:before, .close:after {
+        height: .5rem;
+        width: 2.5rem;
+    }
+
+    .badges {
+        display: block;
+        margin-left: -3px;
+    }
+}
